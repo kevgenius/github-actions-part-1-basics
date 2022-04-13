@@ -2,6 +2,9 @@
 #Copyleft by Evgen Korban 2022
 
 name: My-GitHub-Actions-Basics
+env:
+  APPLICATION_NAME: "MuFlask"
+  DEPLOY_PACKAGE_NAME: "flask-deploy-ver-${{ github.sha }}"
 
 # Controls when the workflow will run
 on:  
@@ -17,7 +20,12 @@ jobs:
     steps:
     - name: Print Hello Message
       run: echo "Hello World from Testing job"
-     
+    
+    -name: Execute few commands
+      run:
+        echo "Hello Message1"
+        echo "Hello Message2"
+        echo "Apllication name: ${{ env.APPLICATION_NAME }}"
      
       
   my_deploy:
