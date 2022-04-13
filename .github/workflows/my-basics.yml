@@ -1,0 +1,30 @@
+# GitHub Actions Part1 - Basics
+#Copyleft by Evgen Korban 2022
+
+name: My-GitHub-Actions-Basics
+
+# Controls when the workflow will run
+on:  
+  push:
+    branches: 
+      - main 
+      
+      
+jobs:
+  my_testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print Hello Message
+      - run: echo "Hello World from Testing job"
+     
+     
+      
+ my_deploy:
+   runs-on: ubuntu-latest
+   
+   steps:
+     - name: Print Hello Message
+     - run: echo "Hello World from Deploy job"
+    
+    
