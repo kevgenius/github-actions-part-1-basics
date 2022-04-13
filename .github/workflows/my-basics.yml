@@ -18,14 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Print Hello Message
+    - name: Print Hello Message in Testing
       run: echo "Hello World from Testing job"
     
     -name: Execute few commands
-      run:
+      run: 
         echo "Hello Message1"
         echo "Hello Message2"
-        echo "Apllication name: ${{ env.APPLICATION_NAME }}"
+        echo "Apllication name ${{ env.APPLICATION_NAME }}"
      
       
   my_deploy:
@@ -33,7 +33,11 @@ jobs:
     needs: [my_testing]
    
     steps:
-    - name: Print Hello Message
+    - name: Print Hello Message in Deploy
       run: echo "Hello World from Deploy job"
+         
+    
+    - name: Printing Deployment Package
+      run: echo "Deploy package name is ${{ env.DEPLOY_PACKAGE_NAME }}"
     
     
