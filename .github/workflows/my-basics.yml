@@ -20,11 +20,11 @@ jobs:
      
      
       
- my_deploy:
-   runs-on: ubuntu-latest
+  my_deploy:
+    runs-on: ubuntu-latest
    
-   steps:
-     - name: Print Hello Message
-     - run: echo "Hello World from Deploy job"
+    steps:
+      - name: Print Hello Message
+      - run: echo "Hello World from Deploy job"
     
     
