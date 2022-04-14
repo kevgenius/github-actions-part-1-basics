@@ -34,10 +34,12 @@ jobs:
     - name: List current folder
       run: ls -la
 
-    - name: Lets test some packages, if the are here
+    - name: Lets test some packages, if the are here1
       run: aws --version
       
-      
+
+    - name: Lets test some packages, if the are here2
+      run: zip
         
 
   my_deploy:
