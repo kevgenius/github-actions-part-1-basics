@@ -27,9 +27,19 @@ jobs:
         echo "Hello Message1"
         echo "Hello Message2"
         
+        
+    - name: Git clone my repo
+      uses: actions/checkout@v1  #закидываем все наши файлы в ОС Докер-контейнера, с помощью внешних скриптов.
+    
     - name: List current folder
-      run:
-        ls -la
+      run: ls -la
+
+    - name: Lets test some packages, if the are here
+      run: aws --version
+      
+      
+        
+
   my_deploy:
     runs-on: ubuntu-latest
     needs: [my_testing]
